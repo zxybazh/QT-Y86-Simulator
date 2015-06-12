@@ -13,8 +13,12 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        simulator.cpp
+        simulator.cpp \
+    state.cpp
 
-HEADERS  += simulator.h
+HEADERS  += simulator.h \
+    state.h
 
 FORMS    += simulator.ui
+
+RESOURCES += res.qrc

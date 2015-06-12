@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>image/y86.png</file>
+        <file>asum.yo</file>
+    </qresource>
+</RCC>

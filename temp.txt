@@ -1,0 +1,67 @@
+intsig INOP
+intsig IHALT
+intsig IRRMOVL ’I_RRMOVL’
+intsig IIRMOVL ’I_IRMOVL’
+intsig IRMMOVL ’I_RMMOVL’
+intsig IMRMOVL ’I_MRMOVL’
+intsig IOPL
+intsig IJXX
+intsig ICALL
+intsig IRET
+intsig IPUSHL
+intsig IPOPL
+intsig FNONE
+intsig RESP
+intsig RNONE
+intsig ALUADD
+intsig SBUB
+intsig SAOK
+intsig SADR
+intsig SINS
+intsig SHLT
+intsig F_predPC
+intsig imem_icode
+intsig imem_ifun
+intsig f_icode ’if_id_next->icode’
+intsig f_ifun
+intsig f_valC
+intsig f_valP
+boolsig imem_error ’imem_error’
+boolsig instr_valid ’instr_valid’
+intsig D_icode ’if_id_curr->icode’
+intsig D_rA ’if_id_curr->ra’
+intsig D_rB ’if_id_curr->rb’
+intsig D_valP ’if_id_curr->valp’
+intsig d_srcA
+intsig d_srcB
+intsig d_rvalA 
+intsig d_rvalB 
+intsig E_icode ’id_ex_curr->icode’
+intsig E_ifun ’id_ex_curr->ifun’
+intsig E_valC ’id_ex_curr->valc’
+intsig E_srcA ’id_ex_curr->srca’
+intsig E_valA ’id_ex_curr->vala’
+intsig E_srcB ’id_ex_curr->srcb’
+intsig E_valB ’id_ex_curr->valb’
+intsig E_dstE ’id_ex_curr->deste’
+intsig E_dstM ’id_ex_curr->destm’
+intsig e_valE ’ex_mem_next->vale’
+boolsig e_Cnd ’ex_mem_next->takebranch’
+intsig e_dstE ’ex_mem_next->deste’
+intsig M_stat ’ex_mem_curr->status’
+intsig M_icode ’ex_mem_curr->icode’
+intsig M_ifun ’ex_mem_curr->ifun’
+intsig M_valA ’ex_mem_curr->vala’
+intsig M_dstE ’ex_mem_curr->deste’
+intsig M_valE ’ex_mem_curr->vale’
+intsig M_dstM ’ex_mem_curr->destm’
+boolsig M_Cnd ’ex_mem_curr->takebranch’
+boolsig dmem_error ’dmem_error’
+intsig m_valM ’mem_wb_next->valm’
+intsig m_stat ’mem_wb_next->status’
+intsig W_stat ’mem_wb_curr->status’
+intsig W_icode ’mem_wb_curr->icode’
+intsig W_dstE ’mem_wb_curr->deste’
+intsig W_valE ’mem_wb_curr->vale’
+intsig W_dstM ’mem_wb_curr->destm’
+intsig W_valM ’mem_wb_curr->valm’
