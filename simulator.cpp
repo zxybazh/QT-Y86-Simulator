@@ -70,6 +70,11 @@ QString Simulator::getHex(int x) {
 	}
 	return ans;
 }
+QString Simulator::getHexNumber(int x) {
+	if (x >= 0 && x <= 9) return QVariant(x).toString();
+	if (x >= 10 && x <= 15) return QString(x-10+'a');
+	return "*";
+}
 
 void Simulator::flush_Registers() {
 	ui->text_eax->setText(getHex(s.eax));
@@ -167,10 +172,10 @@ void Simulator::flush_all() {
 	ui->F_prePC->setText(getHex(s.F_predPC));
 	ui->PC->setText(getHex(s.f_pc));
 	ui->F_ifun->setText(QVariant(s.f_ifun).toString());
-	ui->F_icode->setText(QVariant(s.f_icode).toString());
+	ui->F_icode->setText(getHexNumber(s.f_icode));
 
 	ui->D_stat->setText(getState(s.D_stat));
-	ui->D_icode->setText(QVariant(s.D_icode).toString());
+	ui->D_icode->setText(getHexNumber(s.D_icode));
 	ui->D_ifun->setText(QVariant(s.D_ifun).toString());
 	ui->D_rA->setText(getHex(s.D_rA));
 	ui->D_rB->setText(getHex(s.D_rB));
@@ -178,7 +183,7 @@ void Simulator::flush_all() {
 	ui->D_valP->setText(getHex(s.D_valP));
 
 	ui->E_stat->setText(getState(s.E_stat));
-	ui->E_icode->setText(QVariant(s.E_icode).toString());
+	ui->E_icode->setText(getHexNumber(s.E_icode));
 	ui->E_ifun->setText(QVariant(s.E_ifun).toString());
 	ui->E_valC->setText(getHex(s.E_valC));
 	ui->E_valA->setText(getHex(s.E_valA));
@@ -189,7 +194,7 @@ void Simulator::flush_all() {
 	ui->E_dstM->setText(getHex(s.E_dstM));
 
 	ui->M_stat->setText(getState(s.M_stat));
-	ui->M_icode->setText(QVariant(s.M_icode).toString());
+	ui->M_icode->setText(getHexNumber(s.M_icode));
 	ui->M_cnd->setText((s.M_Cnd?"true":"false"));
 	ui->M_valE->setText(getHex(s.M_valE));
 	ui->M_valA->setText(getHex(s.M_valA));
@@ -197,7 +202,7 @@ void Simulator::flush_all() {
 	ui->M_dstM->setText(getHex(s.M_dstM));
 
 	ui->W_stat->setText(getState(s.W_stat));
-	ui->W_icode->setText(QVariant(s.W_icode).toString());
+	ui->W_icode->setText(getHexNumber(s.W_icode));
 	ui->W_valE->setText(getHex(s.W_valE));
 	ui->W_valM->setText(getHex(s.W_valM));
 	ui->W_dstE->setText(getHex(s.W_dstE));

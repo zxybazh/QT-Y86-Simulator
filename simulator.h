@@ -36,6 +36,7 @@ public:
 	void GetTotalCycle();
 	Ui::Simulator *ui;
 	QString getHex(int);
+	QString getHexNumber(int);
 private:
 	QString output;
 	QString getState(int);
@@ -49,7 +50,7 @@ private:
 	void tick();
 	State s;
 	//To add(init, count, etc.)
-	int Cache_hit, Cache_miss;
+	//int Cache_hit, Cache_miss;
 };
 
 #endif // SIMULATOR_H
